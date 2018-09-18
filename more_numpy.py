@@ -1,4 +1,4 @@
-"""Some general exercises that can be done with numpy (but you don't have to)"""
+"""Some exercises that can be done with numpy (but you don't have to)"""
 
 
 def all_unique_chars(string):
