@@ -24,8 +24,8 @@ def draw_equations_plot():
       y=exp(-x^2) coloured in black
 
     Add a legend, title for the x-axis and a title to the curve, the x-axis
-    should range from -4 to 4 and the y axis should range from 0 to 2. The
-    figure should have a size of 8x6 inches.
+    should range from -4 to 4 (with 50 points) and the y axis should range 
+    from 0 to 2. The figure should have a size of 8x6 inches.
     """
 
     raise NotImplementedError
