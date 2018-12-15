@@ -23,8 +23,9 @@ def find_element(sq_mat, val):
     """
     Write a function that takes a square matrix of integers and returns the
     position (i,j) of a value. The position should be returned as a list of two
-    integers. If the value is present multiple times, a single valid list
-    should be returned.
+    integers. You need to return only one position. if the value is present
+    multiple times, a single valid position should be returned.
+
     The matrix is structured in the following way:
     - each row has strictly decreasing values with the column index increasing
     - each column has strictly decreasing values with the row index increasing
@@ -37,7 +38,6 @@ def find_element(sq_mat, val):
     find_element(mat, 4) --> [1, 1]
 
     The function should raise an exception ValueError if the value isn't found.
-    The time complexity of the function should be linear in the number of rows.
 
     :param sq_mat: the square input matrix with decreasing rows and columns
     :type sq_mat:  numpy.array of int
