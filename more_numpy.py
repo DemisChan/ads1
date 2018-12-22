@@ -74,8 +74,8 @@ def filter_matrix(mat):
 
 def largest_sum(intlist):
     """
-    Write a function that takes in a list of integers, 
-    finds the sublist of contiguous values with at least one 
+    Write a function that takes in a list of integers,
+    finds the sublist of contiguous values with at least one
     element that has the largest sum and returns the sum.
     If the list is empty, 0 should be returned.
 

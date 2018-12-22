@@ -86,7 +86,7 @@ def most_similar(x, v_list):
 def gradient_descent(x_0, learning_rate, tol):
     """
     Write a function that does gradient descent with a fixed learning_rate
-    on function f with gradient g and stops when the update has magnitude 
+    on function f with gradient g and stops when the update has magnitude
     under a given tolerance level (i.e. when |xk-x(k-1)| < tol).
     Return a tuple with the position, the value of f at that position and the
     magnitude of the last update.
