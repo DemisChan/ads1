@@ -133,7 +133,7 @@ def gradient_descent(x_0, learning_rate, tol):
     :return: the position, the value at that position and the latest update
     :rtype: tuple of three float
     """
-
+    import numpy as np
     h = lambda x: (x-1)**2 + np.exp((-x**2)/2)
     f = lambda x: np.log(h(x))
     g = lambda x: (2*(x-1) - x*np.exp((-x*2)/2))/h(x)
