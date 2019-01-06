@@ -6,7 +6,7 @@ def draw_co2_plot():
     Here is some chemistry data
 
       Time (decade): 0, 1, 2, 3, 4, 5, 6
-      CO2 concentration (ppm): 250, 265, 272, 260, 300, 320, 389
+      CO2-concentration (ppm): 250, 265, 272, 260, 300, 320, 389
 
     Create a line graph of CO2 versus time, the line should be a blue dashed
     line. Add a title and axis titles to the plot.
@@ -17,8 +17,8 @@ def draw_co2_plot():
     y = [250, 265, 272, 260, 300, 320, 389]
     plt.plot(x, y, '--', color='blue')
     plt.title('Chemistry Data')
-    plt.xlabel('Time(decade)', fontsize=14)
-    plt.ylabel('CO2-concentration (ppm)', fontsize=14)
+    plt.xlabel('Time (decade)', fontsize=14)
+    plt.ylabel('CO2 concentration (ppm)', fontsize=14)
     plt.show()
 
 
@@ -37,7 +37,7 @@ def draw_equations_plot():
 
     import matplotlib.pyplot as plt
     import numpy as np
-    x = np.linspace(-4, 4, 100)
+    x = np.linspace(-4, 4, 50)
     plt.figure(figsize=(8, 6))
     plt.plot(x, np.cos(x), '--', color='red', label='cos(x)')
     plt.plot(x, x**2, color='blue', linewidth=3, label='x^2')
