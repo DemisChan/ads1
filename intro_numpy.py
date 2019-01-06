@@ -1,5 +1,5 @@
 """A set of numpy exercises"""
-
+import numpy as np
 
 def zero_insert(x):
     """
@@ -14,8 +14,7 @@ def zero_insert(x):
     :return: input vector with elements separated by 4 zeros
     :rtype: numpy.array
     """
-    
-    import numpy as np
+
     i = x.shape[0]
     if i > 0:
         y = np.zeros(5*i-4, dtype=int)
@@ -23,7 +22,6 @@ def zero_insert(x):
     else:
         raise ValueError('Negative Dimensions are not allowed')
     return y
-
 
 def return_closest(x, val):
     """
@@ -43,12 +41,11 @@ def return_closest(x, val):
     :rtype: int | float
     :raise ValueError:
     """
-    import numpy as np
+
     y = abs(x - val)
     itemindex = np.where(y == min(y))
     itemindex[0][0]
     return x[itemindex[0][0]]
-
 
 def cauchy(x, y):
     """
@@ -69,7 +66,7 @@ def cauchy(x, y):
     :rtype: numpy.array of float
     :raise ValueError:
     """
-    import numpy as np
+
     x = np.reshape(x, (len(x), 1))
     for i in x:
         for j in y:
@@ -81,7 +78,6 @@ def cauchy(x, y):
             else:
                 cauchym = 1/(x-y)
                 return cauchym
-
 
 def most_similar(x, v_list):
     """
@@ -100,7 +96,6 @@ def most_similar(x, v_list):
     :rtype: int
     """
 
-    import numpy as np
     temp = []
     for i in v_list:
         a = np.dot(x, i)
@@ -108,7 +103,6 @@ def most_similar(x, v_list):
         temp.append(a/b)
     least = np.array(temp)
     return v_list[np.where(least==max(least))[0][0]]
-
 
 def gradient_descent(x_0, learning_rate, tol):
     """
@@ -133,7 +127,7 @@ def gradient_descent(x_0, learning_rate, tol):
     :return: the position, the value at that position and the latest update
     :rtype: tuple of three float
     """
-    import numpy as np
+
     h = lambda x: (x-1)**2 + np.exp((-x**2)/2)
     f = lambda x: np.log(h(x))
     g = lambda x: (2*(x-1) - x*np.exp((-x*2)/2))/h(x)
