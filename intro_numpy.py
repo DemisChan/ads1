@@ -71,10 +71,12 @@ def cauchy(x, y):
     """
     import numpy as np
     x = np.reshape(x, (len(x), 1))
-    for xi in x:
-        for yj in y:
-            if (xi-yj) == 0:
+    for i in x:
+        for j in y:
+            if (i-j) == 0:
                 raise ValueError('Can not divide by 0')
+            elif x.shape[0] == 0:
+                return np.array([[]])
 
             else:
                 cauchym = 1/(x-y)
@@ -132,6 +134,9 @@ def gradient_descent(x_0, learning_rate, tol):
     :rtype: tuple of three float
     """
 
+    h = lambda x: (x-1)**2 + np.exp((-x**2)/2)
+    f = lambda x: np.log(h(x))
+    g = lambda x: (2*(x-1) - x*np.exp((-x*2)/2))/h(x)
     x = x_0
     update = 1
     point = x
@@ -139,6 +144,4 @@ def gradient_descent(x_0, learning_rate, tol):
         point = x
         x -= learning_rate*g(point) 
         update = abs(x-point)
-    return (x, f(x), update) 
-
-
+    return (x, f(x), update)
