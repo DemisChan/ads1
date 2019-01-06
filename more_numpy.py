@@ -16,7 +16,13 @@ def all_unique_chars(string):
     :rtype:        bool
     """
 
-    raise NotImplementedError
+    import numpy as np
+    x = np.full((0, ), 0)
+    string = string.lower()
+    for i in string:
+        x = np.append(x, i)
+    y = np.unique(x, return_counts=True)[1]
+    return np.all(y <= 1)
 
 
 def find_element(sq_mat, val):

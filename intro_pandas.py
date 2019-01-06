@@ -25,7 +25,10 @@ def filter_rep(df):
     :rtype: pandas.DataFrame
     """
 
-    raise NotImplementedError
+    import pandas as pd
+    df1 = pd.DataFrame(pd.unique(df['A']))
+    df1 = df1.rename(columns={0: 'A'})
+    return df1
 
 
 def subtract_row_mean(df):
