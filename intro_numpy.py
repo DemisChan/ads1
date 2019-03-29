@@ -19,9 +19,10 @@ def zero_insert(x):
     if i > 0:
         y = np.zeros(5*i-4, dtype=int)
         y[0::5] += x[:]
+        return y
     else:
-        raise ValueError('Negative Dimensions are not allowed')
-    return y
+        y = np.zeros(4, dtype=int)
+        return y
 
 def return_closest(x, val):
     """
