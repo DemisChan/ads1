@@ -21,8 +21,7 @@ def zero_insert(x):
         y[0::5] += x[:]
         return y
     else:
-        y = np.zeros(4, dtype=int)
-        return y
+        return x
 
 def return_closest(x, val):
     """
