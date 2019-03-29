@@ -24,12 +24,10 @@ def filter_rep(df):
     :return: a dataframe where rows have been filtered out
     :rtype: pandas.DataFrame
     """
-
     import pandas as pd
-    df1 = pd.DataFrame(pd.unique(df['A']))
-    df1 = df1.rename(columns={0: 'A'})
+    df1: pd.Dataframe = df.drop_duplicates(subset='A', keep='first').reset_index(drop=True)
     return df1
-
+    
 
 def subtract_row_mean(df):
     """
