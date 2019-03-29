@@ -67,17 +67,13 @@ def cauchy(x, y):
     :raise ValueError:
     """
 
-    x = np.reshape(x, (len(x), 1))
-    for i in x:
-        for j in y:
-            if (i-j) == 0:
-                raise ValueError('Can not divide by 0')
-            elif x.shape[0] == 0:
-                return np.array([[]])
-
-            else:
-                cauchym = 1/(x-y)
-                return cauchym
+    x = np.reshape(x, (x.shape[0], 1))
+    y = np.reshape(y, (1, y.shape[0]))
+    if True in np.equal(x,y):
+        raise ValueError
+    else:
+        c_m = 1/(x-y)
+        return c_m
 
 def most_similar(x, v_list):
     """
