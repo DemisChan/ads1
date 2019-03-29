@@ -29,6 +29,7 @@ def filter_rep(df):
     return df1
     
 
+
 def subtract_row_mean(df):
     """
     Given a DataFrame of numeric values, write a function to subtract the row
@@ -45,7 +46,9 @@ def subtract_row_mean(df):
     :return:  a dataframe where each row is centred
     :rtype:   pandas.DataFrame
     """
+    import numpy as np
+    df1 = df.apply(lambda x: x-np.mean(df, axis=1), axis=0)
+    return df1
 
-    raise NotImplementedError
 
 
