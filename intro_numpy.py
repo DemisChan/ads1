@@ -1,7 +1,8 @@
 """A set of numpy exercises"""
 import numpy as np
 
-def zero_insert(x):
+
+def zero_insert(x):  
     """
     Write a function that takes in a vector and returns a new vector where
     every element is separated by 4 consecutive zeros.
@@ -22,6 +23,7 @@ def zero_insert(x):
         return y
     else:
         return x
+
 
 def return_closest(x, val):
     """
@@ -47,6 +49,7 @@ def return_closest(x, val):
     itemindex[0][0]
     return x[itemindex[0][0]]
 
+
 def cauchy(x, y):
     """
     Write a function that takes in two vectors and returns the associated Cauchy
@@ -69,11 +72,12 @@ def cauchy(x, y):
 
     x = np.reshape(x, (x.shape[0], 1))
     y = np.reshape(y, (1, y.shape[0]))
-    if True in np.equal(x,y):
+    if True in np.equal(x, y):
         raise ValueError
     else:
         c_m = 1/(x-y)
         return c_m
+
 
 def most_similar(x, v_list):
     """
@@ -98,7 +102,8 @@ def most_similar(x, v_list):
         b = np.linalg.norm(x)*np.linalg.norm(i)
         temp.append(a/b)
     least = np.array(temp)
-    return np.where(least==least.max())[0][0]
+    return np.where(least == least.max())[0][0]
+
 
 def gradient_descent(x_0, learning_rate, tol):
     """
@@ -132,6 +137,6 @@ def gradient_descent(x_0, learning_rate, tol):
     point = x
     while update > tol:
         point = x
-        x -= learning_rate*g(point) 
+        x -= learning_rate*g(point)
         update = abs(x-point)
     return (x, f(x), update)
