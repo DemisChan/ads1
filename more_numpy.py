@@ -77,8 +77,17 @@ def filter_matrix(mat):
     :return:   a matrix where rows and columns of zero entries in mat are zero
     :rtype:    numpy.array
     """
-
-    raise NotImplementedError
+    mat_c = mat[:]
+    temp_r = set()
+    temp_c = set()
+    for i in np.argwhere(mat == 0):
+        temp_r.add(i[0])
+        temp_c.add(i[1])
+    for i in temp_r:
+        mat_c[i] = 0
+    for j in temp_c:
+        mat_c[:, j] = 0
+    return mat_c
 
 
 def largest_sum(intlist):
