@@ -55,7 +55,7 @@ def find_element(sq_mat, val):
     """
 
     if val in sq_mat:
-        return np.argwhere(sq_mat == val)[0]
+        return list(np.argwhere(sq_mat == val)[0])
     else:
         raise ValueError
 
