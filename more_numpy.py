@@ -1,4 +1,5 @@
 """Some exercises that can be done with numpy (but you don't have to)"""
+import numpy as np
 
 
 def all_unique_chars(string):
@@ -16,7 +17,6 @@ def all_unique_chars(string):
     :rtype:        bool
     """
 
-    import numpy as np
     x = np.full((0, ), 0)
     string = string.lower()
     for i in string:
