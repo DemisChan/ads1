@@ -22,7 +22,7 @@ def all_unique_chars(string):
     for i in string:
         x = np.append(x, i)
     y = np.unique(x, return_counts=True)[1]
-    return np.all(y <= 1)
+    return bool(np.all(y <= 1))
 
 
 def find_element(sq_mat, val):
