@@ -99,39 +99,4 @@ def most_similar(x, v_list):
         temp.append(a/b)
     least = np.array(temp)
     return np.where(least==least.max()[0][0]
-
-def gradient_descent(x_0, learning_rate, tol):
-    """
-    Write a function that does gradient descent with a fixed learning_rate
-    on function f with gradient g and stops when the update has magnitude
-    under a given tolerance level (i.e. when |xk-x(k-1)| < tol).
-    Return a tuple with the position, the value of f at that position and the
-    magnitude of the last update.
-    h(x) = (x-1)^2 + exp(-x^2/2)
-    f(x) = log(h(x))
-    g(x) = (2(x-1) - x exp(-x^2/2)) / h(x)
-
-    Example:
-    (1.0, 0.1, 1e-3) --> approximately (1.2807, -0.6555, 0.0008)
-
-    :param x_0: initial point
-    :type x_0: float
-    :param learning_rate: fixed learning_rate
-    :type learning_rate: float
-    :param tol: tolerance for the magnitude of the update
-    :type tol: float
-    :return: the position, the value at that position and the latest update
-    :rtype: tuple of three float
-    """
-
-    h = lambda x: (x-1)**2 + np.exp((-x**2)/2)
-    f = lambda x: np.log(h(x))
-    g = lambda x: (2*(x-1) - x*np.exp((-x**2)/2)) / h(x)
-    x = x_0
-    update = 1
-    point = x
-    while update > tol:
-        point = x
-        x -= learning_rate*g(point) 
-        update = abs(x-point)
-    return (x, f(x), update)
+    
