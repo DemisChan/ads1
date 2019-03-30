@@ -54,7 +54,10 @@ def find_element(sq_mat, val):
     :raise ValueError:
     """
 
-    return np.argwhere(sq_mat == val)[0]
+    if val in sq_mat:
+        return np.argwhere(sq_mat == val)[0]
+    else:
+        raise ValueError
 
 
 def filter_matrix(mat):
