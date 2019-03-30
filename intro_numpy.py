@@ -98,7 +98,7 @@ def most_similar(x, v_list):
         b = np.linalg.norm(x)*np.linalg.norm(i)
         temp.append(a/b)
     least = np.array(temp)
-    return np.where(least==least.max()[0][0])
+    return np.where(least==least.max())[0][0]
 
 def gradient_descent(x_0, learning_rate, tol):
     """
