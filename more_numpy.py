@@ -108,9 +108,9 @@ def largest_sum(intlist):
     :rtype:         int
     """
     r = []
-    for w in range(1, len(L)+1):
-        for i in range(len(L)-w+1):
-            r.append(L[i:i+w])
+    for w in range(1, len(intlist)+1):
+        for i in range(len(intlist)-w+1):
+            r.append(intlist[i:i+w])
     x = [sum(i) for i in r]
     return max(x)
 
