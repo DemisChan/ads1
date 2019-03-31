@@ -107,8 +107,12 @@ def largest_sum(intlist):
     :return:       the largest sum
     :rtype:         int
     """
-
-    raise NotImplementedError
+        r = []
+    for w in range(1, len(L)+1):
+        for i in range(len(L)-w+1):
+            r.append(L[i:i+w])
+    x = [sum(i) for i in r]
+    return max(x)
 
 
 def pairprod(intlist, val):
