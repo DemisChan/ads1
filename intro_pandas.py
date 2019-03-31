@@ -27,7 +27,6 @@ def filter_rep(df):
     import pandas as pd
     df1: pd.Dataframe = df.drop_duplicates(subset='A', keep='first').reset_index(drop=True)
     return df1
-    
 
 
 def subtract_row_mean(df):
@@ -49,6 +48,4 @@ def subtract_row_mean(df):
     import numpy as np
     df1 = df.apply(lambda x: x-np.mean(df, axis=1), axis=0)
     return df1
-
-
 

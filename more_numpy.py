@@ -138,7 +138,11 @@ def pairprod(intlist, val):
                     entries matches the value val
     :rtype:         list of tuple
     """
+    l1 = list(set(intlist))
+    r = [(i, j) for i in l1 for j in l1 if i * j == val]
+    r_f = list(set([tuple(sorted(i)) for i in r]))
+    return r_f
 
-    raise NotImplementedError
+    
 
 
