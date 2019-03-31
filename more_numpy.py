@@ -112,7 +112,10 @@ def largest_sum(intlist):
         for i in range(len(intlist)-w+1):
             r.append(intlist[i:i+w])
     x = [sum(i) for i in r]
-    return max(x)
+    if not x:
+        return 0
+    else:
+        return max(x)
 
 
 def pairprod(intlist, val):
