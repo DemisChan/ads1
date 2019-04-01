@@ -1,4 +1,4 @@
-# ads1
+# Ads1
 # Spark-Building foundations
-# Exercises for Cambridge Spark Bootcamp 
-# Pandas functions-numpy etc.
+Exercises for Cambridge Spark Bootcamp 
+Pandas functions-numpy etc.
